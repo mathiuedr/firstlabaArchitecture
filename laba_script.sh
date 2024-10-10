@@ -3,7 +3,7 @@ echo $papka
 if [ $papka -gt $2 ];
 then
 	echo 'good';
-	find $1 -maxdepth 1 -type f | sort | tail -$3 | xargs tar cvfz backup.tar.gz
+	find $1 -maxdepth 1 -type f | sort | tail -$3 | xargs tar cvfz backup.tar.gz --remove-files
 else
 	echo 'not good';
 fi
